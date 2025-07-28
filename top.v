@@ -1,11 +1,5 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-//
-// Description: Real-time processing of audio from Line In to Line Out of a Pmod
-//              I2S2 on port JA
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
+// Description: Real-time processing of audio from Line In to Line Out of a Pmod I2S2 on port JA
 
 module top #(
 	parameter NUMBER_OF_SWITCHES = 4,
@@ -70,8 +64,7 @@ module top #(
         .rx_sclk(rx_sclk),
         .rx_sdin(rx_data)
     );
-     
-    // dual_channel_fir_filter #(
+
     single_channel_fir_filter #(
 		.DATA_WIDTH(24)
 	) 
